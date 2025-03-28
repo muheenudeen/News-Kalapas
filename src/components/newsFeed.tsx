@@ -1,5 +1,4 @@
 "use client"
-
 import { useState } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 import { type NewsResponse, fetchNews, type Article } from "@/lib/api"
