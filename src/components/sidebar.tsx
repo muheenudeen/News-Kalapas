@@ -28,7 +28,7 @@ export default function Sidebar() {
           </div>
           <div className="flex-1">
             <h2 className="font-semibold text-lg">Hi Reader,</h2>
-            <p className="text-slate-600">Here's your News!</p>
+            <p className="text-slate-600">Here is your News!</p>
           </div>
           <ChevronDown className={`text-slate-400 transition-transform ${showProfile ? "rotate-180" : ""}`} />
         </div>
