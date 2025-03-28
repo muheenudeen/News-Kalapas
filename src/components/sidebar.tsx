@@ -13,7 +13,8 @@ export default function Sidebar() {
   const [showProfile, setShowProfile] = useState(false)
 
   const setViewMode = (mode: string) => {
-    const params = new URLSearchParams(searchParams)
+    const params = new URLSearchParams(searchParams.toString())
+
     params.set("view", mode)
     router.push(`?${params.toString()}`)
   }
@@ -72,17 +73,15 @@ export default function Sidebar() {
         <div className="flex rounded-md overflow-hidden">
           <button
             onClick={() => setViewMode("card")}
-            className={`flex-1 py-3 flex justify-center items-center transition-colors ${
-              viewMode === "card" ? "bg-emerald-100 text-emerald-700" : "bg-slate-100 text-slate-500"
-            }`}
+            className={`flex-1 py-3 flex justify-center items-center transition-colors ${viewMode === "card" ? "bg-emerald-100 text-emerald-700" : "bg-slate-100 text-slate-500"
+              }`}
           >
             <LayoutGrid size={20} />
           </button>
           <button
             onClick={() => setViewMode("list")}
-            className={`flex-1 py-3 flex justify-center items-center transition-colors ${
-              viewMode === "list" ? "bg-emerald-100 text-emerald-700" : "bg-slate-100 text-slate-500"
-            }`}
+            className={`flex-1 py-3 flex justify-center items-center transition-colors ${viewMode === "list" ? "bg-emerald-100 text-emerald-700" : "bg-slate-100 text-slate-500"
+              }`}
           >
             <List size={20} />
           </button>
@@ -95,6 +94,7 @@ export default function Sidebar() {
           <button className="w-full py-3 bg-emerald-200 text-emerald-700 rounded-md font-medium hover:bg-emerald-300 transition-colors">
             We&apos;re Listening!
           </button>
+
         </Link>
       </div>
     </div>
